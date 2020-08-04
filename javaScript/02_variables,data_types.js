@@ -7,3 +7,10 @@ console.log(typeof(number1));
 console.log(typeof(message));
 console.log(typeof(booleanValue));
 console.log(typeof(19.9));
+
+
+////////////
+// leave a message using variable
+// wish a message to someone using variable
+// memory size of each data type
+//
