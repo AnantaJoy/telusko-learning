@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Over and Out</title>
+    <script>
+
+    function changeImage(){
+        document.getElementsById("img1").src = "img/pexels-01.jpeg";
+    }
+
+    function previousImage(){
+        document.getElementsById("img1").src = "img/pexels-02.jpg";
+    }
+    </script>
+</head>
+<body>
+    
+    <img id="img1" onmouseover="changeImage()"  onmouseout="previousImage()" src="img/pexels-02.jpg" alt="pexels-photo" width="300px">
+     
+</body>
+</html>

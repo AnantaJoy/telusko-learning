@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button</title>
+    <script>
+        function submitChoice(){
+            var fav_lang1 = document.getElementById("lang-1");
+            var fav_lang2 = document.getElementById("lang-2");
+            var fav_lang3 = document.getElementById("lang-3");
+            var fav_lang4 = document.getElementById("lang-4");
+
+            if (fav_lang1.checked == true) {
+                alert(fav_lang1.value+' '+"is your favourite language");
+            }
+            else if (fav_lang2.checked == true) {
+                alert(fav_lang2.value+' '+"is your favourite language");
+            }
+            else if (fav_lang3.checked == true) {
+                alert(fav_lang3.value+' '+"is your favourite language");
+            }
+            else if(fav_lang4.checked == true){
+                alert(fav_lang4.value+" "+"is your favourite language.")
+            }
+            else{
+                alert("No Input Found");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <input type="radio" id="lang-1" name="language" value="javascript">JavaScript</input>
+    <br>
+    <input type="radio" id="lang-2" name="language" value="python">Python</input>
+    <br>
+    <input type="radio" id="lang-3" name="language" value="cpp">C++</input>
+    <br>
+    <input type="radio" id="lang-4"  name="language" value="java">Java</input>
+    <br>
+    <button onclick="submitChoice()">Submit </button>
+</body>
+</html>

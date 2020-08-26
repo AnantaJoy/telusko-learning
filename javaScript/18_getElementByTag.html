@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Tag</title>
+    <script>
+        function changeColor(){
+            var textColor = document.getElementsByTagName("h3");
+            for (let i = 0; i < textColor.length; i++) {
+                textColor[i].style.color = "red";    
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h3>This is heading 1</h3>
+    <h3>This is heading 2</h3>
+    <h3>This is heading 3</h3>
+    <button onclick="changeColor()">Click To Change Color</button>
+</body>
+</html>
