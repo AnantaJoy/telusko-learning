@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validate</title>
+    <script>
+        function validate(){
+            var uname = document.getElementById("username");
+            var password = document.getElementById("password");
+
+            if (uname.value.trim()=="" ){
+                //alert("Blank Username");
+                document.getElementById("lbluser").style.visibility="visible";
+                uname.style.border ="2px solid red"
+                return false;
+            }
+            else if(password.value.trim()==""){
+                //alert("Blank Password");
+                document.getElementById("lblpass").style.visibility="visible";
+                password.style.border = "2px solid red"
+                return false;
+            }
+            else if (password.value.trim().length<5) {
+                password.style.border = "2px solid red"
+                document.getElementById("labelpass").style.visibility="visible";
+               // alert("Password is less than 5 characters");
+                return false;
+            }
+            else{
+                return true;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form action="21.1_form_action.html" onsubmit="return validate()">
+        <input type="text" name="Username" id="username" placeholder="Enter User Name">
+        <label for="Username" id="lbluser" style="color:red; visibility: hidden;" >Invalid</label>
+        <br><br>
+        <input type="password" name="Password" id="password" placeholder="Enter Password">
+        <label for="Username" id="lblpass" style="color:red; visibility: hidden;" >Invalid</label>
+        <label for="Username" id="labelpass" style="color:red; visibility: hidden;" >Password Less Than 5 Characters</label>
+        <br><br>
+        <button type="submit">Log In</button>
+    </form>
+</body>
+</html>

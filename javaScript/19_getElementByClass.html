@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Class</title>
+    <script>
+        function changeStyle(){
+            var element = document.getElementsByClassName("myPara");
+            for (let i = 0; i < element.length; i++) {
+                element[i].style.color = "red";
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <p class="myPara">Paragrah Heading 1</p>
+    <p >Paragrah Heading 2</p>
+    <p class="myPara">Paragrah Heading</p>
+    <p >Paragrah Heading</p>
+    <p class="myPara">Paragrah Heading</p>
+    <button onclick="changeStyle()">Click Here</button>
+</body>
+</html>
