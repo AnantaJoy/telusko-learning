@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <script>
+        function validate(){
+
+            var username = document.getElementById("username").value;
+            //var regex = new RegExp("@ru.ac.bd");
+            var regex = /@[g][m][a][i][l].com/
+
+            if (regex.test(username)) {
+                //alert("Valid User Name");
+                document.getElementById("lbluser").style.visibility = "hidden";
+            }
+
+            else{
+                //alert("Invalid Username");
+                document.getElementById("lbluser").style.visibility = "visible";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form action="message.html">
+        <input type="text" id="username" placeholder="Username" name="user">
+        <br>
+        <label for="user" id="lbluser" style="color: red; visibility: hidden;">Invalid Username</label>
+        <br>
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+</body>
+</html>

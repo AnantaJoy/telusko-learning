@@ -1,0 +1,37 @@
+<!-- Check Reg Ex 
+    @ru.ac.bd in a username or not
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <script>
+
+      function validate(){
+        var username = document.getElementById("username").value;
+        var regex = /@ru.ac.bd/;
+
+        if (regex.test(username)) {
+           // alert("Valid")
+            document.getElementById("lbluservalid").style.visibility = "hidden";
+        }
+        else{
+            //alert("Invalid");
+            document.getElementById("lbluser").style.visibility = "visible";
+        }
+      }
+    </script>
+</head>
+<body>
+    <form action="message.html">
+        <input type="text" id="username" placeholder="Userame">
+        <br>
+        <label for="username" id="lbluser" style="color: red; visibility: hidden;">Invalid Username</label>
+        <label for="username" id="lbluservalid" style="color: green; visibility: hidden;">Valid Username</label>
+        <br>
+        <button onclick="validate()"  type="button">Submit</button>
+    </form>
+</body>
+</html>
