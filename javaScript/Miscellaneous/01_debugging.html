@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging</title>
+    <script>
+        function addValue(){
+            var x = document.getElementById("txt1").value;
+            var y = document.getElementById("txt2").value;
+
+            var sum  = x + y;
+
+            document.getElementById("showresult").innerHTML = "Result:" + sum;  
+
+        }
+    </script>
+</head>
+<body>
+    <input type="number" name="num1" id="txt1" placeholder="Input a Number">
+    <br><br>
+    <input type="number" name="num2" id="txt2" placeholder="Input a Number">
+    <br><br>
+    <button onclick="addValue()" id="sumbtn">Sum</button>
+    <h3 id="showresult">Result:</h3>
+</body>
+</html>

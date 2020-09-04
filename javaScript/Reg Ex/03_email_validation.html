@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-mail Validation</title>
+    <script>
+        function validate(){
+            var number = document.getElementById("txt").value;
+
+            // Bangladeshi Mobile Number Validation
+            var regex = /^([a-zA-Z0-9\.\-\_]+)@([a-zA-Z0-9\-\_]+).([a-z]+)(.[a-z]{2,5})?$/;
+
+            if (regex.test(number)) {
+                document.getElementById("lbltxt").innerHTML = "Valid";
+                document.getElementById("lbltxt").style.visibility = "visible";
+                document.getElementById("lbltxt").style.color = "green";
+            }
+
+            else{
+                document.getElementById("lbltxt").innerHTML = "Invalid";
+                document.getElementById("lbltxt").style.visibility = "visible";
+                document.getElementById("lbltxt").style.color = "red";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <form action="message.html">
+        <input type="text" value="" id="txt" placeholder="Email">
+        <br>
+        <label for="" id="lbltxt" style="color: red; visibility: hidden;">Invalid</label>
+        <br>
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+</body>
+</html>
